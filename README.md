@@ -1,16 +1,132 @@
-# React + Vite
+📌 PRODIGY_FSWD_01 – Secure User Authentication System
+🚀 Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project implements a secure authentication system using React (Vite) and Supabase.
 
-Currently, two official plugins are available:
+It includes:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Email & Password Authentication
 
-## React Compiler
+Google OAuth Login
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+GitHub OAuth Login
 
-## Expanding the ESLint configuration
+Password Reset via Email
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Protected Routes
+
+Session Persistence
+
+Logout Handling
+
+Email Verification Support
+
+The system ensures secure access control and prevents unauthorized access to protected routes.
+
+🛠 Tech Stack
+
+Frontend: React (Vite)
+
+Backend: Supabase (PostgreSQL + Auth)
+
+Authentication: Supabase Auth (Email + OAuth)
+
+Routing: React Router
+
+UI Animations: Framer Motion
+
+Icons: Lucide React
+
+Notifications: Sonner
+
+🔐 Features
+✅ Secure Authentication
+
+User registration with email/password
+
+Login with email/password
+
+OAuth login (Google & GitHub)
+
+✅ Password Recovery
+
+Reset password via email link
+
+Secure password update flow
+
+✅ Protected Dashboard
+
+Only authenticated users can access
+
+Redirects unauthenticated users to login
+
+Prevents back-navigation after logout
+
+✅ Email Verification
+
+Optional email confirmation enabled
+
+Displays verified status
+
+📂 Project Structure
+src/
+ ├── pages/
+ │   ├── Login.jsx
+ │   ├── Signup.jsx
+ │   ├── Dashboard.jsx
+ │   ├── ForgotPassword.jsx
+ │   └── ResetPassword.jsx
+ ├── supabaseClient.js
+ ├── App.jsx
+ └── main.jsx
+
+⚙️ Setup Instructions
+
+1️⃣ Clone the repository
+
+git clone https://github.com/Arsh-kb/PRODIGY_FSWD_01.git
+cd PRODIGY_FSWD_01
+
+
+2️⃣ Install dependencies
+
+npm install
+
+
+3️⃣ Create .env file
+
+VITE_SUPABASE_URL=your_project_url
+VITE_SUPABASE_ANON_KEY=your_anon_key
+
+
+4️⃣ Run locally
+
+npm run dev
+
+🔒 Security Notes
+
+.env file is excluded via .gitignore
+
+Only public anon key is used
+
+No service role keys exposed
+
+OAuth redirect URLs configured in Supabase
+
+📦 Build
+
+To generate production build:
+
+npm run build
+
+🎯 Outcome
+
+This project demonstrates:
+
+Full-stack authentication integration
+
+OAuth provider configuration
+
+Secure route protection
+
+Production-ready build setup
