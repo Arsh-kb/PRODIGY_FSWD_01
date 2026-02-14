@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --border: 214.3 31.8% 91.4%;
+    
+    /* Indigo-ish primary color */
+    --primary: 246 83% 58%;
+    --primary-foreground: 210 40% 98%;
+    
+    /* Purple-ish accent color */
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+  }
+}
